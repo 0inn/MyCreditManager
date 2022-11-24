@@ -18,7 +18,6 @@ struct Const {
     
     struct AddStudent {
         static let msg = "추가할 학생의 이름을 입력해주세요"
-        static let errorMsg = "입력이 잘못되었습니다. 다시 확인해주세요."
         static let success = "학생을 추가했습니다."
         static let existErrorMsg = "은 이미 존재하는 학생입니다. 추가하지 않습니다."
     }
@@ -35,7 +34,7 @@ struct Const {
         입력예) Mickey Swift A+
         만약에 학생의 성적 중 해당 과목이 존재하면 기존 점수가 갱신됩니다.
         """
-        static let errorMsg = "입력이 잘못되었습니다. 다시 확인해주세요."
+        static let errorGradeMsg = "존재하지 않는 성적입니다. A+, A 등의 형태로 입력해주세요."
     }
     
     struct DeleteGrade {
@@ -43,7 +42,6 @@ struct Const {
         성적을 삭제할 학생의 이름, 과목 이름을 띄어쓰기로 구분하여 차례로 작성해주세요.
         입력예) Mickey Swift
         """
-        static let errorMsg = "입력이 잘못되었습니다. 다시 확인해주세요."
         static let errorSubjectMsg = "과목을 찾지 못했습니다."
     }
     
@@ -51,6 +49,10 @@ struct Const {
         static let msg = "평점을 알고싶은 학생의 이름을 입력해주세요"
     }
 
+    struct Error {
+        static let msg = "입력이 잘못되었습니다. 다시 확인해주세요."
+    }
+    
     struct Exit {
         static let msg = "프로그램을 종료합니다..."
     }

@@ -10,11 +10,24 @@ import Foundation
 class MyCreditManager {
     var students: [Student] = []
     
-    func addStudent() {
-        print(Const.AddStudent.msg)
-        let name = readLine()!
+    func checkInput(_ input: InputType) -> String? {
+        print(input.msg)
         
-        // InputError
+        if let cmd = readLine() {
+            if cmd.checkValid() {
+                return cmd
+            } else {
+                print(input.errorMsg)
+                return nil
+            }
+        } else {
+            print(input.errorMsg)
+            return nil
+        }
+    }
+    
+    func addStudent() {
+        guard let name = checkInput(.addStudent) else { return }
         
         if students.map({ $0.name }).firstIndex(of: name) != nil {
             print(name + Const.AddStudent.existErrorMsg)
@@ -25,10 +38,7 @@ class MyCreditManager {
     }
     
     func deleteStudent() {
-        print(Const.DeleteStudent.msg)
-        let name = readLine()!
-        
-        // InputError
+        guard let name = checkInput(.deleteStudent) else { return }
         
         if let studentIdx = students.map({ $0.name }).firstIndex(of: name) {
             students.remove(at: studentIdx)
@@ -39,27 +49,40 @@ class MyCreditManager {
     }
     
     func addGrade() {
-        print(Const.AddGrade.msg)
-        let grade = readLine()!.split(separator: " ").map { String($0) }
+        guard let info = checkInput(.addGrade) else { return }
         
-        // InputError
+        let grade = info.split(separator: " ").map { String($0) }
+        
+        if grade.count < 3 {
+            print(Const.Error.msg)
+            return
+        }
         
         let (name, subject, score) = (grade[0], grade[1], grade[2])
+        
+        if getScore(score) == -1 {
+            print(Const.AddGrade.errorGradeMsg)
+            return
+        }
         
         if let studentIdx = students.map({ $0.name }).firstIndex(of: name) {
             students[studentIdx].grade.append(Grade(subject: subject, score: score))
             print("\(name) 학생의 \(subject) 과목이 \(score)로 추가(변경)되었습니다.")
         } else {
-            print(Const.AddGrade.errorMsg)
+            print(name + Const.DeleteStudent.errorMsg)
         }
     }
     
     func deleteGrade() {
-        print(Const.DeleteGrade.msg)
-        let grade = readLine()!.split(separator: " ").map { String($0) }
+        guard let info = checkInput(.deleteGrade) else { return }
         
-        // InputError
+        let grade = info.split(separator: " ").map { String($0) }
         
+        if grade.count < 2 {
+            print(Const.Error.msg)
+            return
+        }
+
         let (name, subject) = (grade[0], grade[1])
         
         if let studentIdx = students.map({ $0.name }).firstIndex(of: name) {
@@ -100,10 +123,7 @@ class MyCreditManager {
     }
     
     func showGrade() {
-        print(Const.ShowGrade.msg)
-        let name = readLine()!
-        
-        // InputError
+        guard let name = checkInput(.showGrade) else { return }
         
         if let studentIdx = students.map({ $0.name }).firstIndex(of: name) {
             var totalScore = 0.0

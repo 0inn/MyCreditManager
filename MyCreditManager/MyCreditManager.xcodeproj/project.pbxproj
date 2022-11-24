@@ -13,6 +13,7 @@
 		A9D63A5A292F1E52008D129B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D63A59292F1E52008D129B /* Student.swift */; };
 		A9D63A5C292F1E5A008D129B /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D63A5B292F1E5A008D129B /* Grade.swift */; };
 		A9D63A7B292F6A0A008D129B /* InputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D63A7A292F6A0A008D129B /* InputType.swift */; };
+		A9D63A7E292F6D71008D129B /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D63A7D292F6D71008D129B /* String+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		A9D63A59292F1E52008D129B /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		A9D63A5B292F1E5A008D129B /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		A9D63A7A292F6A0A008D129B /* InputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputType.swift; sourceTree = "<group>"; };
+		A9D63A7D292F6D71008D129B /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 		A9D63A3E292E4952008D129B /* MyCreditManager */ = {
 			isa = PBXGroup;
 			children = (
+				A9D63A7C292F6D6A008D129B /* Extension */,
 				A9D63A53292F19D0008D129B /* Manager */,
 				A9D63A58292F1E3B008D129B /* Model */,
 				A9D63A4E292F17E7008D129B /* Const */,
@@ -107,6 +110,14 @@
 				A9D63A7A292F6A0A008D129B /* InputType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		A9D63A7C292F6D6A008D129B /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A9D63A7D292F6D71008D129B /* String+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				A9D63A50292F17EF008D129B /* Const.swift in Sources */,
 				A9D63A57292F1A4B008D129B /* MyCreditManager.swift in Sources */,
 				A9D63A5C292F1E5A008D129B /* Grade.swift in Sources */,
+				A9D63A7E292F6D71008D129B /* String+Ext.swift in Sources */,
 				A9D63A5A292F1E52008D129B /* Student.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
