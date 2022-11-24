@@ -12,6 +12,7 @@
 		A9D63A57292F1A4B008D129B /* MyCreditManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D63A56292F1A4B008D129B /* MyCreditManager.swift */; };
 		A9D63A5A292F1E52008D129B /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D63A59292F1E52008D129B /* Student.swift */; };
 		A9D63A5C292F1E5A008D129B /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D63A5B292F1E5A008D129B /* Grade.swift */; };
+		A9D63A7B292F6A0A008D129B /* InputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9D63A7A292F6A0A008D129B /* InputType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,7 @@
 		A9D63A56292F1A4B008D129B /* MyCreditManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCreditManager.swift; sourceTree = "<group>"; };
 		A9D63A59292F1E52008D129B /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		A9D63A5B292F1E5A008D129B /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
+		A9D63A7A292F6A0A008D129B /* InputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +67,10 @@
 		A9D63A3E292E4952008D129B /* MyCreditManager */ = {
 			isa = PBXGroup;
 			children = (
-				A9D63A51292F17F5008D129B /* MyCreditManager */,
+				A9D63A53292F19D0008D129B /* Manager */,
+				A9D63A58292F1E3B008D129B /* Model */,
+				A9D63A4E292F17E7008D129B /* Const */,
+				A9D63A79292F69FA008D129B /* Enum */,
 				A9D63A3F292E4952008D129B /* main.swift */,
 			);
 			path = MyCreditManager;
@@ -77,16 +82,6 @@
 				A9D63A4F292F17EF008D129B /* Const.swift */,
 			);
 			path = Const;
-			sourceTree = "<group>";
-		};
-		A9D63A51292F17F5008D129B /* MyCreditManager */ = {
-			isa = PBXGroup;
-			children = (
-				A9D63A53292F19D0008D129B /* Manager */,
-				A9D63A58292F1E3B008D129B /* Model */,
-				A9D63A4E292F17E7008D129B /* Const */,
-			);
-			path = MyCreditManager;
 			sourceTree = "<group>";
 		};
 		A9D63A53292F19D0008D129B /* Manager */ = {
@@ -104,6 +99,14 @@
 				A9D63A5B292F1E5A008D129B /* Grade.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		A9D63A79292F69FA008D129B /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				A9D63A7A292F6A0A008D129B /* InputType.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9D63A7B292F6A0A008D129B /* InputType.swift in Sources */,
 				A9D63A40292E4952008D129B /* main.swift in Sources */,
 				A9D63A50292F17EF008D129B /* Const.swift in Sources */,
 				A9D63A57292F1A4B008D129B /* MyCreditManager.swift in Sources */,
